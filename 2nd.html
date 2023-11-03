@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            text-align: center;
+            font-family: Candara, Oswald;
+        }
+        p {
+            font-size: 24px;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        #botao1, #botao2 {
+            display: block;
+            margin: 0 auto;
+            width: 80%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>Are you gay?</p>
+    <img src="pictures/mizkif-lgbt.gif">
+    <button id="botao1">YES!</button>
+    <button id="botao2">NO</button>
+    <script>
+        const button2 = document.getElementById('botao2');
+        let left = 40;
+        button2.addEventListener('mouseover', function() {
+            if (left == 40) {
+                left = 44;
+            } else {
+                left = 40;
+            }
+            this.style.left = left + '%';
+        });
+
+        document.getElementById('botao1').addEventListener('click', function() {
+            alert('You clicked YES!');
+        });
+    </script>
+</body>
+</html>
